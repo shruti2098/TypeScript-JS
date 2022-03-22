@@ -1,34 +1,34 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { AppComponent } from './app.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
-import { DemoComponent } from './demo/demo.component';
+import { DetailsComponent } from './details/details.component';
+import { EditComponent } from './edit/edit.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
-const routes: Routes = 
-[
+const routes: Routes = [
   {
-    path:" ",
-    component:AppComponent
-  },
-
-  {
-    path:"home",
-    component:HomeComponent
+    path:"",
+    component:UserdetailsComponent,
   },
   {
-    path:"contact",
-    component:ContactComponent
+    path:"userdetails",
+    component:UserdetailsComponent,
   },
   {
-    path:"about",
-    component:AboutComponent
+    path:"edit/:id",
+    component:EditComponent,
   },
   {
-    path:"demo",
-    component:DemoComponent
+    path:"details/:id",
+    component:DetailsComponent,
   },
+  {
+    path:'userdetails' , loadChildren: () => import('./userdetails/userdetails.module').then(m => m.UserdetailsModule)
+  },
+  {
+    path:"**",
+    component:PagenotfoundComponent,
+  }
 ];
 
 @NgModule({

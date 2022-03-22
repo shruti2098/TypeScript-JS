@@ -1,9 +1,13 @@
-<h1>Welcome To Demo</h1>
-<nav class="nav-link">
-<a [routerLink]="['/home']">Home</a><br>
-<a [routerLink]="['/contact']">Contact Us</a><br>
-<a [routerLink]="['/about']">Abouut Us</a><br>
-<a [routerLink]="['/demo']">Demo</a>
-</nav>
-
-<router-outlet> </router-outlet> 
+<div><h1>Routing Demo</h1></div>
+<a routerLink="userdetails">userdetails</a>
+<!-- background-color -->
+<div [ngStyle]="{'background-color': bgColor}">
+    Hello This is Shruti
+  </div>
+  <button (click)="changeColor()">Change Color!</button>
+  <!-- uppercase and lowercase -->
+  <div>
+	<h1 > {{message|uppercase}}</h1>
+    <h1>{{message2|lowercase}}</h1>    
+</div>
+<router-outlet></router-outlet>

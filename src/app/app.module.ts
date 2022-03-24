@@ -3,24 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserdetailsComponent } from './userdetails/userdetails.component';
-import { EditComponent } from './edit/edit.component';
-import { DetailsComponent } from './details/details.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserdetailsComponent,
-    EditComponent,
-    DetailsComponent,
-    PagenotfoundComponent
+    TestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [TestComponent]
 })
 export class AppModule { }
